@@ -14,7 +14,7 @@ app.use((req,res,next)=>{
      next();
   })
 
-app.get('/',(req,res)=>{
+app.get('/check',(req,res)=>{
     res.send("hello from backend")
 
 })
@@ -26,7 +26,6 @@ app.use('/api',require("./Routers/displayMyOrder"))
 
 app.use('/api',require("./Routers/food_details"))
 app.use('/api',require("./Routers/takeOrder"))
-
 
 
 app.listen(process.env.PORT,()=>{

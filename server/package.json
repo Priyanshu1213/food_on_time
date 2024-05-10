@@ -11,4 +11,8 @@
     "nodemon": "^3.0.3",
     "punycode": "^2.3.1"
   }
+  ,
+"scripts": {
+  "start": "start nodemon index.js"
+}
 }
