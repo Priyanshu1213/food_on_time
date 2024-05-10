@@ -1,0 +1,51 @@
+
+.Nav {
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(83, 83, 83, 0.1);
+  }
+  
+  /* Style for the navbar */
+  .Navbar_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+  }
+  
+  /* Style for the logo */
+  .Navbar_2 img {
+    object-fit: contain;
+   
+    
+    
+    width: 100%;
+    height: 70px;
+
+  }
+  
+  /* Style for the links */
+  .Navbar_21 {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .Navbar_211 {
+    font-size:22px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:white;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    
+
+    transition: transform 0.2s;
+  }
+  
+  .Navbar_211:hover {
+    color: #e67123;
+    transform: scale(1.05);
+  }
+  
+  

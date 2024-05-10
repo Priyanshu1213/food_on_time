@@ -1,0 +1,87 @@
+
+   /* Reset some default styles */
+body, h1, img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a box-sizing border-box model for better layout */
+* {
+  box-sizing: border-box;
+}
+
+
+.Filtter_1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.Filtter_11{
+  margin-top: 10px;
+}
+
+
+.Filtter_12 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 35px;
+}
+
+
+.Filtter_121 {
+  flex-basis: calc(33.33% - 20px); /* Adjust the width for responsiveness */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  
+}
+
+
+.Filtter_121 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+
+.Filtter_121 h2 {
+  padding: 10px;
+  text-align: center;
+  font-size:large;
+  border-radius: 0 0 8px 8px;
+  background-color: #161515;
+  
+}
+.Filtter_121 h2:hover {
+  background-color: #383838;
+}
+
+
+.Filtter_121:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(231, 231, 231, 0.5);
+  
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .Filtter_121 {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 555px) {
+  .Filtter_121 {
+    flex-basis: 100%;
+  }
+}

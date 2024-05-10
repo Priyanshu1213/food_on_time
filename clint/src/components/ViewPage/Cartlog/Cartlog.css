@@ -1,0 +1,105 @@
+
+/* Reset some default styles */
+body, h2, h4, img {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  /* Apply a box-sizing border-box model for better layout */
+  * {
+    box-sizing: border-box;
+    
+  }
+  
+ 
+  .Cartlog_1 {
+    flex-basis: calc(33.33% - 20px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius:8px 8px;
+    margin-top: 40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+  overflow: hidden;
+  
+    
+  background-color: #161515;
+ color:#fff;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  .Cartlog_1:hover{
+    box-shadow: 0 0 10px rgba(231, 231, 231, 0.5);
+    
+  }
+  
+  .Cartlog_11  {
+    width: 100%;
+    align-items: center;
+    height: 250px;
+    border-radius:8px 8px;
+  }
+  .Cartlog_11 img {
+    width: 100%;
+    height: 250px;
+    border-radius:8px 8px;
+  }
+  
+  
+  .Cartlog_12 {
+    width: 100%;
+    flex-direction: column;
+
+  }
+  
+  /* Style the name and rating section */
+  .Cartlog_121 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #161515;
+    /* border-bottom: 1px solid #ddd; */
+    
+  }
+  
+  
+  
+  
+  .btu {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: large;
+    padding: 10px 10px;
+    /* transition: background-color 0.2s ease-in-out; */
+    transition: transform 0.1s;
+  }
+  
+  
+  .btu:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 827px) {
+    .Cartlog_1 {
+      flex-basis: calc(50% - 20px); /* Adjust the width for smaller screens */
+    }
+  
+    
+  }
+
+  @media (max-width: 555px) {
+    .Cartlog_1 {
+      flex-basis: calc(80% - 20px); /* Adjust the width for smaller screens */
+    }
+  
+    
+  }
+  

@@ -1,0 +1,16 @@
+.content{
+  width: 100%;
+  align-items: center;
+  background-color:#111314;
+  
+}
+
+
+.nav1{
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+  
+ 
+
+}
