@@ -7,11 +7,11 @@ const cors= require("cors")
 
 
 const corsOptions = {
-    origin: "https://foodwithpriyanshu.netlify.app/",
+    origin: ["https://foodwithpriyanshu.netlify.app", "https://foodwithpriyanshu.netlify.app/"],
+    credentials:true
   };
   
   app.use(cors(corsOptions));
-app.use(cors())
 
 
 app.use(bodyParser.json())
