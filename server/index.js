@@ -2,6 +2,16 @@ const express = require("express")
 const app=express();
 const bodyParser = require("body-parser")
 const db= require("./db")
+const cors= requre("cors")
+
+
+
+const corsOptions = {
+    origin: "https://foodwithpriyanshu.netlify.app/",
+  };
+  
+  app.use(cors(corsOptions));
+app.use(cors())
 
 
 app.use(bodyParser.json())
