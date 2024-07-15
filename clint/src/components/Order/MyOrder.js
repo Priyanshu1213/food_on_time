@@ -28,7 +28,7 @@ export default function MyOrder() {
 const fetchMyOrder = async () => {
     try {
       console.log(localStorage.getItem('userEmail'));
-      const response = await fetch("http://localhost:5000/api/myorderdisplay", {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/myorderdisplay`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json'

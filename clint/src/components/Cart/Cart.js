@@ -47,6 +47,7 @@ const handlepay = async () => {
       totalprice:totalprice
     })
   });
+  alert("order received")
   console.log("JSON RESPONSE:::::", response)
   if (response.status === 200) {
     dispatch({ type: "DROP" })
@@ -60,23 +61,6 @@ const totalprice=state.reduce((total,food)=>total+(food.foodprice*food.Foodquant
 
 
   return (
-//     <div className="container2222">
-//       {state.map((Food,index)=>(
-//         <tr>
-//           <th scope='row'>{index+1}</th>
-//           <td><img className="fimg" alt='foodimg' src={Food.foodimg}/></td>
-//           <td>{Food.foodname}</td>
-//           <td>{Food.foodprice*Food.Foodquantity}</td>
-//           <td><input  type='number' onChange={(event) => handleFoodQuantityChange(index, event)}  min="1" name='Foodquantity'  value={Food.Foodquantity}/></td>
-//           <td><button onClick={()=>dispatch({type:"remove",index:index})}>X</button></td>
-//         </tr>
-//       ))}
-
-// <h3>Total Price : {totalprice}</h3>
-// <button className='pay' onClick={handlepay}>Check Out</button>
-//     </div>
-
-
 
 
 <div>

@@ -41,13 +41,16 @@ export default function Navbar() {
 
   function logout(){
     var a="yes"
+    
     localStorage.removeItem("authToken");
     if(localStorage.removeItem("authToken")){
       a="yes"
+      
     }
     else{
      a="no"
     }
+    alert("you logout")
     console.log(a)
     Navigate('/')
   }
@@ -63,8 +66,12 @@ export default function Navbar() {
             src="https://image.pngaaa.com/511/412511-small.png" 
           />
         </div>
+        
+
+
         {(!localStorage.getItem("authToken"))?
         <div className="Navbar_21">
+          <div className="Navbar_211" onClick={() => Navigate("/")}>Home</div>
         <div className="Navbar_211" onClick={() => Navigate("/login")}>Login-in</div>
         <div className="Navbar_211" onClick={() => Navigate("/signup")}>Sing-up</div>
         <div className="Navbar_211" onClick={cart} > Add Cart</div>
@@ -73,6 +80,7 @@ export default function Navbar() {
       
       :
       <div className="Navbar_21">
+        <div className="Navbar_211" onClick={() => Navigate("/")}>Home</div>
         <div className="Navbar_211" onClick={yourorder} >My Order</div>
       <div className="Navbar_211" onClick={cart} > Add Cart {" "}
       {(!state.length <= 0)?   <Badge pill bg="danger">{state.length}</Badge>  : ""   }

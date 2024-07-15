@@ -7,7 +7,7 @@ const cors= require("cors")
 
 
 const corsOptions = {
-    origin: ["https://foodwithpriyanshu.netlify.app", "https://foodwithpriyanshu.netlify.app/"],
+    origin: ["http://localhot:3000", "https://foodwithpriyanshu.netlify.app"],
     credentials:true
   };
   
@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
 app.use((req,res,next)=>{
-    res.setHeader("Access-Control-Allow-Origin","https://foodwithpriyanshu.netlify.app/");
+    res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
     res.header("Access-Control-Allow-Headers",
     "Origin,X-Requested-With, Content-Type, Accept");
      next();
