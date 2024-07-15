@@ -51,7 +51,7 @@ const cors = require("cors");
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://foodwithpriyanshu.netlify.app",
+  origin: "https://food-on-time.vercel.app",
   credentials: true,
 };
 
