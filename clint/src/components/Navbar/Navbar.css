@@ -1,36 +1,46 @@
 
 .Nav {
+ 
     background-color: #000000;
     box-shadow: 0 2px 4px rgba(83, 83, 83, 0.1);
   }
   
-  /* Style for the navbar */
+ 
   .Navbar_1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    max-width: 1200px;
+   
     height: 80px;
     margin: 0 auto;
   }
   
-  /* Style for the logo */
+  .Navbar_2 {
+    background-color: black;
+   
+  }
+  
+
   .Navbar_2 img {
+   
     object-fit: contain;
     cursor: pointer;
    
-    
-    
-    width: 100%;
     height: 70px;
 
   }
+
+
+  .menu{
+    display: block;
+  }
   
-  /* Style for the links */
+  
   .Navbar_21 {
     display: flex;
-    gap: 50px;
+
+    gap: 5px;
   }
   
   .Navbar_211 {
@@ -39,9 +49,14 @@
     color:white;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
-    
-
     transition: transform 0.2s;
+
+
+    display: flex;
+      justify-content: center;
+      align-items: center;
+    width: 20vh;
+
   }
   
   .Navbar_211:hover {
@@ -49,4 +64,66 @@
     transform: scale(1.05);
   }
   
+  
+
+  
+  .hamburger-menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none; 
+  }
+  
+  .drawer {
+    position: fixed;
+    top: 80px;
+    right: -400px;
+    width: 200px;
+    height: auto;
+    background-color: #333;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .drawer.open {
+    right: 0; 
+    display: none;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block; 
+    }
+
+    .drawer.open {
+      display: block;
+      justify-items: center;
+      
+    }
+  
+
+
+    .menu{
+      display: none;
+    }
+
+
+    .Navbar_21 {
+     
+      flex-direction: column;
+      
+     
+
+    }
+
+    .Navbar_211 {
+      padding: 10px;
+      
+      
+    }
+  }
   

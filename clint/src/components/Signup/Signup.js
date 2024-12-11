@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import { useNavigate } from 'react-router-dom'
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignUp = () => {
@@ -36,10 +38,31 @@ const SignUp = () => {
     const json=await response.json()
     console.log(json)
     if(!json.success){
-      alert("Enter Valid Credentials")
+      // alert("Enter Valid Credentials")
+      toast.error("Enter your correct credentials",{
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        
+        
+      });
     }
     else{
-      alert("create successfully ")
+      // alert("create successfully ")
+      toast.success("register successfully",{
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        
+      });
     Navigate('/login')
     }
     

@@ -2,9 +2,14 @@
   width: 100%;
   align-items: center;
   background-color:#111314;
-  
+  overflow-y: scroll; /* Enables vertical scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; 
+  height: 100vh;
 }
-
+.content::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
 
 .nav1{
   top: 0;

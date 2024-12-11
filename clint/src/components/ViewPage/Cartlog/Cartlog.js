@@ -3,6 +3,8 @@ import React from 'react'
 import "./Cartlog.css"
 import { useDispatchCart, useStateCart } from '../../contextReducer'
 import { useNavigate } from 'react-router-dom';
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Cartlog(props) {
   const Navigate = new useNavigate();
@@ -16,7 +18,17 @@ const add = async()=>{
   }
   else{
     Navigate('/')
-    alert("please login")
+    // alert("please login")
+    toast.error("please login",{
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      
+    });
     // Navigate('/login')
   }
   

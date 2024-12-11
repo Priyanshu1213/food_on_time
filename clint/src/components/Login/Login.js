@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom'
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -34,10 +36,32 @@ const Login = () => {
     const json1=await response.json()
     console.log(json1)
     if(!json1.success){
-      alert("Enter your correct credentials")
+      // alert("Enter your correct credentials")
+      toast.error("Enter your correct credentials",{
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        
+        
+      });
     }
     else{
-      alert("loging successfully ")
+      // alert("loging successfully ")
+      toast.success("loging successfully",{
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        
+      });
+      
       localStorage.setItem("userEmail",data.email)
       localStorage.setItem("authToken",json1.authToken)
       // localStorage.setItem("admin",JSON.stringify(json1.authToken))

@@ -51,7 +51,7 @@ const cors = require("cors");
 
 // CORS configuration
 const corsOptions = {
-  origin: "https://food-on-time.vercel.app",
+  origin: ["https://food-on-time.vercel.app","http://localhost:3000"],
   credentials: true,
 };
 

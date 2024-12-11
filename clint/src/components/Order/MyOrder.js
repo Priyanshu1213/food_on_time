@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 // import { useNavigate } from 'react-router-dom'
 import './MyOrder.css';
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function MyOrder() {
@@ -42,6 +44,16 @@ const fetchMyOrder = async () => {
       setOrderData(temp); 
     } catch (error) {
       console.error("Error fetching my order:", error);
+      toast.error(error,{
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        
+      });
     }
   };
 

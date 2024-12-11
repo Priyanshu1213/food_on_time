@@ -19,15 +19,15 @@ export default function Filtter(props) {
         </div>
         <div className='Filtter_12'>
         <div className='Filtter_121' onClick={() => handleCategoryChange('Pizza')}>
-          <img alt='Pizza' src='https://i0.wp.com/www.thursdaynightpizza.com/wp-content/uploads/2022/06/veggie-pizza-side-view-out-of-oven.png?resize=720%2C480&ssl=1'/>
+          <img alt='Pizza' src='https://septemberfarmcheese.b-cdn.net/wp-content/uploads/Blogs/Homemade-Pizza/homemade-pizza-monterey-jack-cheese.jpg'/>
           <h2>Pizza</h2>
         </div>
         <div className='Filtter_121' onClick={() => handleCategoryChange('Biryani')}>
-        <img alt='Pizza' src='https://img-global.cpcdn.com/recipes/d80b825db82e1dfe/680x482cq70/sindhi-chicken-biryani-recipe-main-photo.jpg'/>
+        <img alt='Pizza' src='https://www.freshtohome.com/blog/wp-content/uploads/2024/08/Biryani.jpeg'/>
         <h2>Biryani</h2>
         </div>
         <div className='Filtter_121'onClick={() => handleCategoryChange('Burger')}>
-        <img alt='Pizza' src='https://www.finedininglovers.com/sites/g/files/xknfdk626/files/2022-05/Popl_burger.jpg'/>
+        <img alt='Pizza' src='https://static.vecteezy.com/system/resources/thumbnails/023/558/535/small_2x/close-up-of-a-juicy-burger-with-fries-it-look-very-delicious-big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-and-red-onion-photo.jpg'/>
           <h2>Burger</h2>
         </div>
         <div className='Filtter_121'onClick={() => handleCategoryChange('Chicken')}>

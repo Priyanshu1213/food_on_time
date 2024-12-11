@@ -5,6 +5,8 @@
 import "./Cart.css"
 import React from 'react'
 import { useDispatchCart,useStateCart } from '../contextReducer';
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Cart() {
 
@@ -47,7 +49,17 @@ const handlepay = async () => {
       totalprice:totalprice
     })
   });
-  alert("order received")
+  // alert("order received")
+  toast.success("order received",{
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    
+  });
   console.log("JSON RESPONSE:::::", response)
   if (response.status === 200) {
     dispatch({ type: "DROP" })

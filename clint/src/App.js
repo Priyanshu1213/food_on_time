@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter,Route,Routes} from "react-router-dom"
+import {BrowserRouter,Navigate,Route,Routes, useLocation} from "react-router-dom"
 
 import SignUp from './components/Signup/Signup'
 import Firstpage from './Firstpage'
@@ -8,13 +8,34 @@ import { CartProvider } from './components/contextReducer'
 import MyOrder from './components/Order/MyOrder'
 import Navbar from './components/Navbar/Navbar'
 import './App.css'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function App() {
 
+
+  function ProtectedRoute({ children }) {
+    const token = localStorage.getItem('authToken');
+    const location = useLocation();
+  
+    if (!token) {
+      
+      
+      
+      return <Navigate to="/login" state={{ from: location }} replace  />;
+  
+    }
+    
+    return children;
+  }
+
   
   return (
     <div className='content'>
+      
+   <ToastContainer />
+   
       
       <CartProvider>
       <BrowserRouter>
@@ -24,7 +45,7 @@ export default function App() {
         <Route path="/" element={<Firstpage/>} />
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/myorder' element={<MyOrder/>}/>
+        <Route path='/myorder' element={<ProtectedRoute> <MyOrder/> </ProtectedRoute>}/>
 
         
         
@@ -35,6 +56,8 @@ export default function App() {
       </BrowserRouter>
        
       </CartProvider>
+
+      
     </div>
   )
 }

@@ -3,6 +3,8 @@ import Cartlog from '../Cartlog/Cartlog';
 import axios from "axios"
 import "./MapforCartlog.css"
 import Filtter from '../Filtter/Filtter';
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function MapforCartlog() {
   
@@ -14,14 +16,26 @@ export default function MapforCartlog() {
 
     useEffect(()=>{
   const temp=async ()=>{
+    
     try {
         const fetcheddata=(await axios.get(`${process.env.REACT_APP_BASE_URL}/api/fooddetails`)).data
         setData(fetcheddata.response);
         setProducts(fetcheddata.response)
+
+        if (fetcheddata.length <= 0) {
+          toast("Fetching data, please wait...");
+          
+        } 
+        
      
         
     } catch (error) {
         console.log(error)
+        toast.error("Failed to fetch data. Please try again later.", {
+          isLoading: false,
+          autoClose: 3000,
+        });
+        
     }
      
   } 
@@ -29,6 +43,13 @@ export default function MapforCartlog() {
 
     },[])
     console.log(data)
+
+    
+
+    
+    
+
+
     
     
     const handleCallback = (childData ) => {
@@ -76,9 +97,10 @@ export default function MapforCartlog() {
 <input type='search' placeholder='Search...' id="search-box" value={searchVal} onChange={filterBySearch} />
 </div>
 
+
             
       {data.length<=0 ?
-      ( <h1>No Data Found</h1> ):
+      ( <h1>Data Loading....</h1> ):
       (
            <div className='Map1' >
            {data.map((item)=>
