@@ -25,11 +25,20 @@ form {
     border-radius: 4px;
   }
   
+
+  .butn{
+width: 100%;
+
+display: flex;
+justify-content: space-around;
+  }
+
+
   form button {
-    background-color: #40bfe6;
+    background-color: #4082e6;
     color: #fff;
     padding: 12px 20px;
-    margin-left: 110px;
+    
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -38,7 +47,7 @@ form {
   }
   
   form button:hover {
-    background-color: #0299be;
+    background-color: #0263be;
   }
   
   /* Responsive styles */

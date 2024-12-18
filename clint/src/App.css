@@ -2,8 +2,8 @@
   width: 100%;
   align-items: center;
   background-color:#111314;
-  overflow-y: scroll; /* Enables vertical scrolling */
-  scrollbar-width: none; /* For Firefox */
+  overflow-y: scroll; 
+  scrollbar-width: none; 
   -ms-overflow-style: none; 
   height: 100vh;
 }

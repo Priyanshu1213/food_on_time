@@ -99,8 +99,11 @@ const Login = () => {
         />
       </label>
       <br />
+      <div className='butn'>
       <button type="submit" onClick={login}>Login</button>
       <button type="submit" onClick={()=>Navigate('/signup')} >Create New User</button>
+      </div>
+      
     </form>
     </>
   );

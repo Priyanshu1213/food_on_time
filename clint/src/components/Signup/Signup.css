@@ -28,12 +28,19 @@ form {
     border: 1px solid #ddd;
     border-radius: 4px;
   }
+
+
+  .butn{
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-around;
+      }
   
   form button {
     background-color: #007bff;
     color: #fff;
-    padding: 12px 20px;
-    margin-left: 50px;
+    padding: 12px 20px;   
     border: none;
     border-radius: 5px;
     cursor: pointer;

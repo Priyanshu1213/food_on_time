@@ -81,6 +81,7 @@ export default function Navbar() {
               )}
             </div>
             {cartView && (<Portal onClose={() => setCartView(false)}><Cart /></Portal>)}
+            
             <div className="Navbar_211" onClick={logout}>
               Logout
             </div>

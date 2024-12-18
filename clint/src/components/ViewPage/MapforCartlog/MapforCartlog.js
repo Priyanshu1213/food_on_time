@@ -54,10 +54,12 @@ export default function MapforCartlog() {
     
     const handleCallback = (childData ) => {
       console.log(childData)
-      const filtter = products.filter((item) => item.foodname.toLowerCase().includes(childData.toLowerCase()));
-      setData(filtter)
-
-      
+      if(childData==="All"){
+        setData(products)
+      }else{
+        const filtter = products.filter((item) => item.foodname.toLowerCase().includes(childData.toLowerCase()));
+        setData(filtter)
+      }
       
 
     }
@@ -103,8 +105,8 @@ export default function MapforCartlog() {
       ( <h1>Data Loading....</h1> ):
       (
            <div className='Map1' >
-           {data.map((item)=>
-           <Cartlog   priya={item}  />
+           {data.map((item,index)=>
+           <Cartlog key={item.id || index}  priya={item}  />
            )}
            </div>
       )

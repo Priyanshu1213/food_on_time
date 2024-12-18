@@ -106,8 +106,10 @@ const SignUp = () => {
         />
       </label>
       <br />
+      <div className='butn'>
       <button type="submit" onClick={signup}>Sign Up</button>
       <button type="submit" onClick={()=>Navigate('/login')} >Already Created</button>
+      </div>
     </form>
     </div>
   );

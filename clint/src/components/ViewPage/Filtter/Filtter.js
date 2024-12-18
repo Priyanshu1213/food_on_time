@@ -18,6 +18,10 @@ export default function Filtter(props) {
         <h1>Eat What Makes you Happy</h1>
         </div>
         <div className='Filtter_12'>
+        <div className='Filtter_121' onClick={() => handleCategoryChange('All')}>
+          <img alt='Pizza' src='https://cdn.freepixel.com/preview/free-photos-this-image-showcases-a-wide-variety-of-food-items-representing-12-distinct-cuisines-from-various-cul-preview-100318301.jpg'/>
+          <h2>All Items</h2>
+        </div>
         <div className='Filtter_121' onClick={() => handleCategoryChange('Pizza')}>
           <img alt='Pizza' src='https://septemberfarmcheese.b-cdn.net/wp-content/uploads/Blogs/Homemade-Pizza/homemade-pizza-monterey-jack-cheese.jpg'/>
           <h2>Pizza</h2>
